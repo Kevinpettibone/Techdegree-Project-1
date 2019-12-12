@@ -1,8 +1,13 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -57,10 +62,16 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/backgroundimage.jpg') no-repeat top center;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:auto;
+  padding:0;
+
 }
 header {
   line-height: 1.5;
@@ -77,29 +88,41 @@ header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 .tag {
-  background-color: #efefef;
+  background-color: #B5BAB7;
   color: black;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
-  background-color: #222;
-  color: yellow;
+  background-color: #B5BAB7;
+  color: #D11204;
+}
+
+.description {
+  background-color: #B5BAB7;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+
 }
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
+  max-height: 500px;
   text-align: left;
-  background: #fff;
+  background: #B5BAB7;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: #D11204;
 }
 
 ul.skills {
@@ -108,16 +131,29 @@ ul.skills {
 }
 
 .skills li {
+  text-align: left;
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #D01305;
   color: white;
   padding: 5px 10px;
   margin: 2px;
+  float: left;
+  clear: left;
+}
+
+.mainskills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #D01305;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px;
+
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #000000;
 }
 
 footer {
@@ -141,38 +177,14 @@ footer ul li {
   display: inline-block;
 }
 
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
-}
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-a.github {
-  background-image: url(images/github.svg);
-}
-a.social:hover {
-  opacity: 1;
-}
-.clearfix {
-  clear: both;
-}
+
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -200,8 +212,5 @@ a.social:hover {
   footer {
     font-size: 1.3em;
     max-width: 1200px;
-    margin: 40px auto;
-  }
-
-}
-
+    margin: 40px;
+  };
