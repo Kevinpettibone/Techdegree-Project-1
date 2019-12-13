@@ -116,9 +116,9 @@ header .profile-image:hover {
   max-height: 500px;
   text-align: left;
   background: #B5BAB7;
-  border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  border: 2px solid black;
 
 }
 .card:hover {
@@ -141,6 +141,8 @@ ul.skills {
   float: left;
   clear: left;
 }
+
+
 
 .mainskills li {
   border-radius: 6px;
